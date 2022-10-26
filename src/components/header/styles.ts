@@ -130,7 +130,7 @@ export const HeaderMobileMenu = styled.nav<{ isOpen?: boolean }>`
 `;
 export const HeaderLogoMobile = styled.img<{ isOpen: boolean }>`
   width: 0;
-  height: 0px;
+  height: 70px;
   ${props =>
     props.isOpen &&
     css`
