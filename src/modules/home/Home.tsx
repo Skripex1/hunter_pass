@@ -10,6 +10,7 @@ import { setContractRefferalCodeAction } from '../../store/actions/contract-acti
 import { blockchainLoadingSelector } from '../../store/selectors/blockchain-selectors';
 import { contractLoadingSelector } from '../../store/selectors/contract-selectors';
 import { getReferralFromUri } from '../../utils/convertReferralCode';
+import About from './components/about';
 import Banner from './components/banner';
 import Faq from './components/faq';
 import Team from './components/team';
@@ -32,9 +33,9 @@ const Home = (): JSX.Element => {
       <Element name="banner">
         <Banner />
       </Element>
-      {/* <Element name="about">
+      <Element name="about">
         <About />
-      </Element> */}
+      </Element>
       {/* <Element name="utility">
         <Utility />
       </Element> */}
