@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../store';
 import { setAppIsNavOpenAction } from '../../store/actions/app-actions';
-import { appIsNavOpen, appIsScrolledSelector, appWidthSelector } from '../../store/selectors/app-selectors';
+import { appIsNavOpen, appWidthSelector } from '../../store/selectors/app-selectors';
 import {
   HeaderContainer,
   HeaderLeftSection,
@@ -19,7 +19,6 @@ import './styles.css';
 
 const Header = (): JSX.Element => {
   const dispatch = useAppDispatch();
-  const isScrolled = useAppSelector(appIsScrolledSelector);
   const width = useAppSelector(appWidthSelector);
   const isOpen = useAppSelector(appIsNavOpen);
   const handleOpenLinktree = () => {
@@ -39,7 +38,7 @@ const Header = (): JSX.Element => {
   };
   if (width < 900) {
     return (
-      <HeaderContainer isScrolled={isScrolled}>
+      <HeaderContainer>
         <HeaderLogoContainer>
           <HeaderLogoNavMenuMobile src="assets/header-logo.png" />
         </HeaderLogoContainer>
@@ -76,7 +75,7 @@ const Header = (): JSX.Element => {
     );
   }
   return (
-    <HeaderContainer isScrolled={isScrolled}>
+    <HeaderContainer>
       <HeaderLeftSection>
         <HeaderLogo src="assets/header-logo.png" />
       </HeaderLeftSection>

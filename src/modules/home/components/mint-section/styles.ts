@@ -1,64 +1,21 @@
-import styled, { css } from '../../../../theme';
+import styled from '../../../../theme';
 
-export const MintSectionContainer = styled.section<{ sliderCard: number; sliderDirection: boolean }>`
+export const MintSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   margin: 50px 0;
-  ${props =>
-    props.sliderDirection
-      ? css`
-          transition: margin-top 0.9s ease;
-        `
-      : css`
-          transition: margin-top 0.3s ease;
-        `};
-  ${props =>
-    props.sliderCard === 2 &&
-    css`
-      margin-top: -550px;
-    `}
-  ${props =>
-    props.sliderCard === 1 &&
-    css`
-      margin-top: -400px;
-    `}
-  ${props =>
-    props.sliderCard === 0 &&
-    css`
-      margin-top: 30px;
-    `}
   padding: 0 40px;
   @media screen and (max-width: 768px) {
     padding: 0 20px;
     gap: 10px;
     margin-bottom: 30px;
-    ${props =>
-      props.sliderCard === 2 &&
-      css`
-        margin-top: -420px;
-      `}
-    ${props =>
-      props.sliderCard === 1 &&
-      css`
-        margin-top: -300px;
-      `}
   }
   @media screen and (max-width: 512px) {
     padding: 0 20px;
     gap: 10px;
     margin-bottom: 30px;
-    ${props =>
-      props.sliderCard === 2 &&
-      css`
-        margin-top: -380px;
-      `}
-    ${props =>
-      props.sliderCard === 1 &&
-      css`
-        margin-top: -250px;
-      `}
   }
 `;
 
