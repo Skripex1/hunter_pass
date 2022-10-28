@@ -7,9 +7,9 @@ export const FaqContainer = styled.section`
   align-items: center;
   background-image: ${`url(${bgImage})`};
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   flex: 1;
-  min-height: 100vh;
   gap: 40px;
   padding: 0 40px;
 `;

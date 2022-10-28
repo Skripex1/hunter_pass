@@ -13,7 +13,7 @@ export const FixedContainer = styled.div`
   flex-direction: column;
 `;
 export const HomeItemCentered = styled(Element)`
-  flex: 1 1 auto;
+  min-height: 1000px;
   display: flex;
   flex-direction: column;
 `;
