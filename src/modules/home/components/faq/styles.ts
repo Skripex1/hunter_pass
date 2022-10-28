@@ -7,6 +7,7 @@ export const FaqContainer = styled.section`
   align-items: center;
   background-image: ${`url(${bgImage})`};
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   flex: 1;
   gap: 40px;

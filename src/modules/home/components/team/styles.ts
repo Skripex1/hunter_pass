@@ -6,6 +6,7 @@ export const TeamContainer = styled.section`
   background-image: ${`url(${bgImage})`};
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   flex: 1;
   flex-direction: column;
   align-items: center;
