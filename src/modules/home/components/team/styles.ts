@@ -11,7 +11,6 @@ export const TeamContainer = styled.section`
   align-items: center;
   justify-content: center;
   gap: 70px;
-  min-height: 100vh;
   @media screen and(max-width: 512px) {
     gap: 25px;
   }
@@ -34,6 +33,7 @@ export const TeamTitle = styled.h1`
   @media screen and (max-width: 312px) {
     font-size: ${props => props.theme.fontSize.large};
     padding: 0 12px;
+    margin-top: 50px;
   }
 `;
 
@@ -58,6 +58,13 @@ export const TeamMafiaRoomContainer = styled.div`
   justify-content: center;
   gap: 15px;
   padding: 0 40px;
+  margin-right: 60px;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-right: 0;
+  }
 `;
 export const TmrText = styled.h3`
   text-align: right;
@@ -68,10 +75,13 @@ export const TmrText = styled.h3`
   text-transform: uppercase;
   letter-spacing: 1.4px;
   position: relative;
+  @media screen and (max-width: 900px) {
+    text-align: center;
+  }
   @media screen and (max-width: 768px) {
     font-size: ${props => props.theme.fontSize.large};
   }
-  @media screen and (max-width: 312px) {
+  @media screen and (max-width: 512px) {
     font-size: ${props => props.theme.fontSize.medium};
   }
 `;
@@ -80,4 +90,8 @@ export const TmrImage = styled.img`
   width: 100px;
   border-radius: 50%;
   align-self: center;
+  @media screen and (max-width: 512px) {
+    width: 60px;
+    height: 60px;
+  }
 `;

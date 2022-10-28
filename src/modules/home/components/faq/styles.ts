@@ -9,7 +9,6 @@ export const FaqContainer = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   flex: 1;
-  min-height: 100vh;
   gap: 40px;
   padding: 0 40px;
 `;
