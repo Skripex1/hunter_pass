@@ -1,4 +1,3 @@
-
 type colors = {
   primary: string;
   accent?: string;
