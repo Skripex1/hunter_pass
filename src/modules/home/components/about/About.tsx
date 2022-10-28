@@ -1,6 +1,6 @@
 import React from 'react';
-import { firstSectionData, IAboutProps } from './constants';
-import { AboutFirstContainer, AboutSecondContainer, AfCardContainer, AfCardText, AfCardTitle, AfTitle, AsTitle } from './styles';
+import { firstSectionData, IAboutProps, secondSectionData } from './constants';
+import { AboutFirstContainer, AboutSecondContainer, AfCardContainer, AfCardText, AfCardTitle, AfTitle, AsCardContainer, AsTitle } from './styles';
 
 const About = (): JSX.Element => {
   const buildFirstCard = (props: IAboutProps): JSX.Element => {
@@ -12,6 +12,14 @@ const About = (): JSX.Element => {
       </AfCardContainer>
     );
   };
+  const buildSecondCard = (props: IAboutProps): JSX.Element => {
+    const { title, paddingRight, text } = props;
+    return (
+      <AsCardContainer key={title} paddingRight={paddingRight}>
+        <AfCardText>{text}</AfCardText>
+      </AsCardContainer>
+    );
+  };
   return (
     <>
       <AboutFirstContainer>
@@ -20,6 +28,7 @@ const About = (): JSX.Element => {
       </AboutFirstContainer>
       <AboutSecondContainer>
         <AsTitle>Anunnaki and Mafia Room Declaration</AsTitle>
+        {secondSectionData.map(item => buildSecondCard(item))}
       </AboutSecondContainer>
     </>
   );

@@ -28,6 +28,6 @@ export const secondSectionData: IAboutProps[] = [
   },
   {
     text: 'We stand for sovereignty, truth, art, community, web3 and gamers. We will establish the first web 3 esports org and create the most powerful network yet seen in this space.',
-    paddingRight: 1,
+    paddingRight: 3,
   },
 ];

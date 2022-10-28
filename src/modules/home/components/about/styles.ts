@@ -78,10 +78,13 @@ export const AsTitle = styled.h1`
     font-size: ${props => props.theme.fontSize.xLarge};
     padding: 0 12px;
   }
+  @media screen and (max-width: 890px) {
+    text-align: center;
+    padding: 0;
+  }
   @media screen and (max-width: 768px) {
     font-size: ${props => props.theme.fontSize.xLarge};
     align-self: center;
-    text-align: center;
     width: 90%;
     margin: 0;
   }
@@ -139,11 +142,32 @@ export const AfCardText = styled.p`
   font-size: ${props => props.theme.fontSize.small};
   font-family: ${props => props.theme.fonts.regular};
   width: 80%;
-  max-width: 800px;
+  max-width: 700px;
   text-align: right;
   color: ${props => props.theme.colors.textWhite};
   @media screen and (max-width: 890px) {
     text-align: center;
     padding: 0;
+  }
+`;
+
+export const AsCardContainer = styled.article<{ paddingRight: number }>`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-self: flex-end;
+  padding-right: ${props => {
+    if (props.paddingRight === 2) {
+      return '140px';
+    }
+    if (props.paddingRight === 1) return '80px';
+    return '220px';
+  }};
+  align-items: flex-end;
+  @media screen and (max-width: 890px) {
+    align-self: center;
+    align-items: center;
+    padding: 0;
+    gap: 36px;
   }
 `;
