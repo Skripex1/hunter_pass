@@ -22,5 +22,3 @@ export const getRequestSwitchForm = (network: number): ISwitchNetworkData => {
   if (network === 1) return switchToEthereum;
   return switchToCustom(network);
 };
-
-export const emptyAddress = '0x0000000000000000000000000000000000000000';

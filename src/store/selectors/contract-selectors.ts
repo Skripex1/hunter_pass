@@ -4,7 +4,6 @@ import IContractData from '../../types/IContractData';
 import ISalePhase from '../../types/ISalePhase';
 
 export const contractLoadingSelector = (state: RootState): boolean => state.contract.loading;
-export const contractReferralSelector = (state: RootState): string => state.contract.referral;
 export const contractDataSelector = (state: RootState): IContractData => state.contract.data;
 export const contractSalePhaseSelector = (state: RootState): ISalePhase => state.contract?.data?.salePhase;
 
