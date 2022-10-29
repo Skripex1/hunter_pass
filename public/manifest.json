@@ -1,6 +1,6 @@
 {
-  "short_name": "TopBull",
-  "name": "Create React App Sample",
+  "short_name": "Anunnakis",
+  "name": "Anunnakis Vision",
   "icons": [
     {
       "src": "website-logo.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "website-logo.jpeg",
+      "src": "website-logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "website-logo.jpeg",
+      "src": "website-logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
