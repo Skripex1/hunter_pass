@@ -55,7 +55,7 @@ const Header = (): JSX.Element => {
           <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="about">
             About
           </InsideLink>
-          <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="utlitiy">
+          <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="utility">
             Utility
           </InsideLink>
           <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="roadmap">
@@ -82,7 +82,7 @@ const Header = (): JSX.Element => {
       <HeaderNavContainer>
         <NavLink to="banner">Home</NavLink>
         <NavLink to="about">About</NavLink>
-        <NavLink to="utlitiy">Utility</NavLink>
+        <NavLink to="utility">Utility</NavLink>
         <NavLink to="roadmap">Roadmap</NavLink>
         <NavLink to="esports">Esports</NavLink>
         <NavLink to="team">Team</NavLink>
