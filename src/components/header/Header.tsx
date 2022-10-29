@@ -23,7 +23,7 @@ const Header = (): JSX.Element => {
   const isOpen = useAppSelector(appIsNavOpen);
   const handleOpenLinktree = () => {
     dispatch(setAppIsNavOpenAction(false));
-    window.open('');
+    window.open('https://linktr.ee/anunnakivision');
   };
   const buildButton = (): JSX.Element => {
     return (

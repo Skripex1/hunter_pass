@@ -15,7 +15,7 @@ import {
 
 const Footer = (): JSX.Element => {
   const handleOpenLinktree = () => {
-    window.open('');
+    window.open('https://linktr.ee/anunnakivision');
   };
   return (
     <FooterContainer>
