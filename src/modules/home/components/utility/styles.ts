@@ -1,4 +1,3 @@
-import { PropaneSharp } from '@mui/icons-material';
 import styled from '../../../../theme';
 import utility from './utility_background.png';
 
@@ -12,7 +11,7 @@ export const UtilityContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  padding: 50px 0;
   text-transform: uppercase;
 `;
 export const UtilityTitle = styled.h1`
@@ -32,6 +31,12 @@ export const UtilityCards = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: 100%;
+    padding: 0 30px;
+    gap: 10px;
+  }
+  @media screen and (max-width: 512px) {
+    flex-direction: column;
+    text-align: center;
     gap: 10px;
   }
 `;
@@ -41,11 +46,13 @@ export const PercentageCard = styled.h1`
   @media screen and (max-width: 768px) {
     font-size: ${props => props.theme.fontSize.large};
   }
+  @media screen and (max-width: 512px) {
+    font-size: ${props => props.theme.fontSize.xxLarge};
+  }
 `;
 export const DescripitonCard = styled.p`
   font-size: ${props => props.theme.fontSize.medium};
   color: ${props => props.theme.colors.white};
-  text-align: center;
   @media screen and (max-width: 1200px) {
     font-size: ${props => props.theme.fontSize.small};
   }

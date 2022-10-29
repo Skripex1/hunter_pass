@@ -102,3 +102,17 @@ export const FooterLinktreeButton = styled.p`
     text-align: center;
   }
 `;
+export const FooterMafiaContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+`;
+export const DesignByText = styled.p`
+  color: ${props => props.theme.colors.white};
+  font-size: ${props => props.theme.fontSize.xSmall};
+  font-weight: ${props => props.theme.fonts.inter};
+  max-width: 100px;
+  align-self: center;
+  text-align: center;
+`;

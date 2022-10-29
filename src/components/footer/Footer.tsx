@@ -1,5 +1,17 @@
 import React from 'react';
-import { FooterContainer, FooterCopyRight, FooterIcon, FooterLinktreeButton, FooterLogo, FooterLogoImg, FooterLogoTitle, FooterWrapper, FooterWrapperContainer } from './styles';
+import {
+  DesignByText,
+  FooterContainer,
+  FooterCopyRight,
+  FooterIcon,
+  FooterLinktreeButton,
+  FooterLogo,
+  FooterLogoImg,
+  FooterLogoTitle,
+  FooterMafiaContainer,
+  FooterWrapper,
+  FooterWrapperContainer,
+} from './styles';
 
 const Footer = (): JSX.Element => {
   const handleOpenLinktree = () => {
@@ -17,7 +29,10 @@ const Footer = (): JSX.Element => {
         </FooterWrapper>
         <FooterWrapper>
           <FooterLinktreeButton onClick={handleOpenLinktree}>linktree</FooterLinktreeButton>
-          <FooterIcon src="assets/mafia-room.png" />
+          <FooterMafiaContainer>
+            <FooterIcon src="assets/mafia-room.png" />
+            <DesignByText>Designed by Mafia Room </DesignByText>
+          </FooterMafiaContainer>
         </FooterWrapper>
       </FooterWrapperContainer>
     </FooterContainer>

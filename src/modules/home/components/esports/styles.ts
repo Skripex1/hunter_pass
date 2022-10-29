@@ -44,9 +44,6 @@ export const EsportsQuestion = styled.div`
   @media screen and (max-width: 768px) {
     font-size: ${props => props.theme.fontSize.medium};
   }
-  @media screen and (max-width: 492px) {
-    font-size: ${props => props.theme.fontSize.mSmall};
-  }
 `;
 export const EsportsDescription = styled.div`
   font-size: ${props => props.theme.fontSize.medium};
@@ -68,7 +65,9 @@ export const EsportsCards = styled.div`
   gap: 60px;
   @media screen and (max-width: 550px) {
     flex-direction: column;
-    gap: 50px;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
   }
 `;
 export const LeftEsportsCards = styled.div`
@@ -85,6 +84,11 @@ export const LeftEsportsCards = styled.div`
   @media screen and (max-width: 750px) {
     font-size: ${props => props.theme.fontSize.xSmall};
   }
+  @media screen and (max-width: 550px) {
+    padding: 0;
+    width: 100%;
+    font-size: ${props => props.theme.fontSize.medium};
+  }
 `;
 export const RightEsportsCards = styled.div`
   display: flex;
@@ -99,5 +103,10 @@ export const RightEsportsCards = styled.div`
   }
   @media screen and (max-width: 750px) {
     font-size: ${props => props.theme.fontSize.xSmall};
+  }
+  @media screen and (max-width: 550px) {
+    padding: 0;
+    width: 100%;
+    font-size: ${props => props.theme.fontSize.medium};
   }
 `;
