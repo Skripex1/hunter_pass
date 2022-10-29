@@ -17,6 +17,8 @@ import Team from './components/team';
 import { FixedContainer, HomeContainer, HomeItemCentered } from './styles';
 import Esports from './components/esports';
 import Gaming from './components/gaming';
+import Roadmap from './components/roadmap';
+import Utility from './components/utility';
 
 const Home = (): JSX.Element => {
   const blockchainLoading = useAppSelector(blockchainLoadingSelector);
@@ -38,10 +40,12 @@ const Home = (): JSX.Element => {
       <Element name="about">
         <About />
       </Element>
-      {/* <Element name="utility">
+      <Element name="utility">
         <Utility />
-      </Element> */}
-      <Element name="roadmap">{/* <Roadmap /> */}</Element>
+      </Element>
+      <Element name="roadmap">
+        <Roadmap />
+      </Element>
       <Element name="gaming">
         <Gaming />
       </Element>
