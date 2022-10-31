@@ -20,7 +20,7 @@ export const EsportsContainer = styled.section`
   }
   @media screen and (max-width: 768px) {
     padding-left: 50px;
-    gap: 85px;
+    gap: 20px;
   }
   @media screen and (max-width: 492px) {
     padding-left: 25px;
@@ -87,7 +87,7 @@ export const LeftEsportsCards = styled.div`
   @media screen and (max-width: 550px) {
     padding: 0;
     width: 100%;
-    font-size: ${props => props.theme.fontSize.medium};
+    font-size: ${props => props.theme.fontSize.small};
   }
 `;
 export const RightEsportsCards = styled.div`
@@ -107,6 +107,6 @@ export const RightEsportsCards = styled.div`
   @media screen and (max-width: 550px) {
     padding: 0;
     width: 100%;
-    font-size: ${props => props.theme.fontSize.medium};
+    font-size: ${props => props.theme.fontSize.small};
   }
 `;
