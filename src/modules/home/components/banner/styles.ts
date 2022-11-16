@@ -9,7 +9,7 @@ export const BannerContainer = styled.section`
   background-repeat: no-repeat;
   background-image: url(${banner});
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   padding-top: 130px;
   flex-direction: column;
@@ -20,25 +20,27 @@ export const BannerContainer = styled.section`
 
 export const BannerInformation = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 16px;
-  width: 88%;
+  width: 97%;
   padding: 0 80px;
   padding-right: 10px;
+  @media screen and (max-width: 1050px) {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
   @media screen and (max-width: 768px) {
     width: 100%;
     padding: 0 60px;
-    padding-right: 10px;
   }
   @media screen and (max-width: 492px) {
     padding: 0 25px;
-    padding-right: 0;
   }
   @media screen and (max-width: 312px) {
     align-items: center;
     width: 100%;
     padding: 0 20px;
-    padding-right: 10px;
   }
 `;
 
