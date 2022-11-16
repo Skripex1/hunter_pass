@@ -18,15 +18,16 @@ export const fetchContractInfoActionAsync = createAsyncThunk<void, never, { stat
   thunkApi.dispatch(setContractLoadingAction(true));
   try {
     const contractData: IContractData = {
-      balance: mapFromBigNumberToNumber(await contract.balanceOf(account)),
-      prices: mapFromPricesToPrices(await contract.prices()),
-      salePhase: await contract.salePhase(),
-      supplies: mapFromSuppliesToSupplies(await contract.supply()),
-      walletOfOwner: await contract.walletOfOwner(account),
-      mintedNftsByUser: mapFromBigNumberToNumber(await contract.walletClaimed(account)),
-      reveal: mapBooleanToBoolean(await contract.revealed()),
-      maxPerWallet: mapFromBigNumberToNumber(await contract.maxPublic()),
-      currentPrice: mapBigNumberToString(await contract.currentPriceByPhase()),
+      price: mapBigNumberToString(await contract.publicPrice()),
+      presalePrice: mapBigNumberToString(await contract.presalePrice()),
+      presaleStatus: mapBooleanToBoolean(await contract.presaleStatus()),
+      whitelistStatus: mapBooleanToBoolean(await contract.whitelistStatus()),
+      paused: mapBooleanToBoolean(await contract.paused()),
+      publicMintPerTx: mapFromBigNumberToNumber(await contract.publicMintPerTx()),
+      maxSupply: mapFromBigNumberToNumber(await contract.maxSupply()),
+      mintedNftsByUser: mapFromBigNumberToNumber(await contract.publicClaimed(account)),
+      mintedWhitelistNftsByUser: mapFromBigNumberToNumber(await contract.whitelistClaimed(account)),
+      whitelistMaxPerWallet: mapFromBigNumberToNumber(await contract.whitelistMaxPerWallet()),
       currentSupply: mapFromBigNumberToNumber(await contract.totalSupply()),
     };
     thunkApi.dispatch(setContractDataAction(contractData));
