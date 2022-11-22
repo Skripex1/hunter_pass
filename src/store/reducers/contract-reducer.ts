@@ -8,7 +8,7 @@ interface State {
 }
 const initialState: State = {
   loading: false,
-  data: null,
+  data: {} as IContractData,
 };
 
 const contractReducer = createReducer(initialState, builder =>
