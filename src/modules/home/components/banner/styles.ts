@@ -58,6 +58,7 @@ export const BannerTitle = styled.h1`
 
   @media screen and (min-width: 1200px) {
     font-size: 100px;
+    max-width: 700px;
   }
   @media screen and (max-width: 1200px) {
     text-shadow: 1px 1px black;

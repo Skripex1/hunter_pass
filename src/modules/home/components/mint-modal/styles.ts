@@ -6,6 +6,7 @@ export const MintModalContainer = styled.section`
   justify-content: center;
   padding: 30px 50px;
   gap: 10px;
+  min-height: 600px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   @media screen and (max-width: 1050px) {
@@ -90,13 +91,13 @@ export const MMCButton = styled.button`
   }
 `;
 
-export const MintModalButton = styled.button`
+export const MintModalButton = styled.button<{ isDisabled?: boolean }>`
   padding: 10px 30px;
   outline: 0;
   border: 0;
   border-radius: 10px;
   margin-top: 20px;
-  background-color: #8bdcff;
+  background-color: ${props => (props.isDisabled ? 'gray' : '#8bdcff')};
   color: ${props => props.theme.colors.white};
   font-size: ${props => props.theme.fontSize.large};
   text-transform: uppercase;
