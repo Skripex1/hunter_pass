@@ -6,6 +6,7 @@ interface IContractData {
   paused: boolean;
   publicMintPerTx: number;
   maxSupply: number;
+  isVip: boolean;
   mintedWhitelistNftsByUser: number;
   whitelistMaxPerWallet: number;
   mintedNftsByUser: number;

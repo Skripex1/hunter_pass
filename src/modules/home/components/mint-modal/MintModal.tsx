@@ -25,7 +25,10 @@ const MintModal = (): JSX.Element => {
       return 'Sale is closed!';
     }
     if (contractData.whitelistStatus) {
-      return 'Private sale is live now!';
+      if (contractData.isVip) {
+        return 'VIP sale is live now!';
+      }
+      return 'Whitelist sale is live now!';
     }
     return 'Public sale is live now!';
   };

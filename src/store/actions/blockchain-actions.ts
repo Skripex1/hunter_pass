@@ -22,6 +22,7 @@ import initMerkleTree from '../../utils/merkle';
 import alertService from '../../services/alert-service';
 import { contractDataSelector } from '../selectors/contract-selectors';
 import IMintRequest from '../../types/IMintRequest';
+import ISalePhase from '../../types/ISalePhase';
 
 export const setBlockchainLoadingAction = createAction<boolean>(BLOCKCHAIN__SET_LOADING);
 export const setBlockchainAccountAction = createAction<string>(BLOCKCHAIN__SET_ACCOUNT);
@@ -89,7 +90,12 @@ export const blockchainMintNftAsyncAction = createAsyncThunk<void, IMintRequest,
   try {
     if (contract) {
       let tx;
-      const proofs = initMerkleTree(account);
+      let proofs;
+      if (contractData.isVip) {
+        proofs = initMerkleTree(account, ISalePhase.VIP);
+      } else {
+        proofs = initMerkleTree(account, ISalePhase.WHITELIST);
+      }
       if (contractData.presaleStatus === true) {
         if (contractData.whitelistStatus === true) {
           tx = await contract.mint(data.amount, proofs, { value: (Number(contractData.presalePrice) * data.amount).toString() });
@@ -106,9 +112,13 @@ export const blockchainMintNftAsyncAction = createAsyncThunk<void, IMintRequest,
     const errorMsg = e?.error?.message.substring(0, 40);
     if (errorMsg === 'UNPREDICTABLE_GAS_LIMIT') alertService.errorAlert({ title: 'Contract error', message: 'Something went wrong' });
     else {
+      const errorMsg2 = e?.error?.message;
       const fallback: string = e?.error?.data?.message;
-      if (fallback.includes('execution reverted: ')) {
+      if (fallback && fallback.includes('execution reverted: ')) {
         const newMsg = fallback.replace('execution reverted: ', '');
+        alertService.errorAlert({ title: 'Contract error', message: newMsg });
+      } else if (errorMsg2 && errorMsg2.includes('execution reverted: ')) {
+        const newMsg = errorMsg2.replace('execution reverted: ', '');
         alertService.errorAlert({ title: 'Contract error', message: newMsg });
       } else {
         alertService.errorAlert({ title: 'Contract error', message: errorMsg || 'Contract failed' });

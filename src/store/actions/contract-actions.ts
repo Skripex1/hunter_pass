@@ -23,6 +23,7 @@ export const fetchContractInfoActionAsync = createAsyncThunk<void, never, { stat
       presaleStatus: mapBooleanToBoolean(await contract.presaleStatus()),
       whitelistStatus: mapBooleanToBoolean(await contract.whitelistStatus()),
       paused: mapBooleanToBoolean(await contract.paused()),
+      isVip: mapBooleanToBoolean(await contract.isVip()),
       publicMintPerTx: mapFromBigNumberToNumber(await contract.publicMintPerTx()),
       maxSupply: mapFromBigNumberToNumber(await contract.maxSupply()),
       mintedNftsByUser: mapFromBigNumberToNumber(await contract.publicClaimed(account)),

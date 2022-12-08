@@ -18,7 +18,6 @@ import Utility from './components/utility';
 const Home = (): JSX.Element => {
   const blockchainLoading = useAppSelector(blockchainLoadingSelector);
   const contractLoading = useAppSelector(contractLoadingSelector);
-
   return (
     <HomeContainer>
       <AppLoaderOverlay isLoading={blockchainLoading || contractLoading} />
