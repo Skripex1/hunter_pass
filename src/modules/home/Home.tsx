@@ -1,54 +1,40 @@
 import { Element } from 'react-scroll';
-import AppLoaderOverlay from '../../components/app-loader-overlay';
-import Footer from '../../components/footer';
 import Header from '../../components/header';
 import { useAppSelector } from '../../store';
 import { blockchainLoadingSelector } from '../../store/selectors/blockchain-selectors';
 import { contractLoadingSelector } from '../../store/selectors/contract-selectors';
-import About from './components/about';
-import Banner from './components/banner';
-import Faq from './components/faq';
-import Team from './components/team';
-import { FixedContainer, HomeContainer, HomeItemCentered } from './styles';
-import Esports from './components/esports';
-import Gaming from './components/gaming';
-import Roadmap from './components/roadmap';
-import Utility from './components/utility';
+import { HomeContainer } from './styles';
+import Banner from '../components/banner';
+import Overview from '../components/overview';
+import RoadMap from '../components/roadmap';
+import MintDistribution from '../components/mintdistribution';
+import Team from '../components/team';
+import Faq from '../components/faq';
+import Footer from '../components/footer';
 
 const Home = (): JSX.Element => {
-  const blockchainLoading = useAppSelector(blockchainLoadingSelector);
-  const contractLoading = useAppSelector(contractLoadingSelector);
+  // const blockchainLoading = useAppSelector(blockchainLoadingSelector);
+  // const contractLoading = useAppSelector(contractLoadingSelector);
   return (
     <HomeContainer>
-      <AppLoaderOverlay isLoading={blockchainLoading || contractLoading} />
+      {/* <AppLoaderOverlay isLoading={blockchainLoading || contractLoading} /> */}
       <Header />
       <Element name="banner">
         <Banner />
       </Element>
-      <Element name="about">
-        <About />
-      </Element>
-      <Element name="utility">
-        <Utility />
+      <Element name="overview">
+        <Overview />
       </Element>
       <Element name="roadmap">
-        <Roadmap />
+        <RoadMap />
       </Element>
-      <Element name="gaming">
-        <Gaming />
+      <MintDistribution />
+      <Element name="team">
+        <Team />
       </Element>
-      <Element name="esports">
-        <Esports />
+      <Element name="faq">
+        <Faq />
       </Element>
-      <FixedContainer>
-        <HomeItemCentered name="team">
-          <Team />
-        </HomeItemCentered>
-        <HomeItemCentered name="faq">
-          <Faq />
-        </HomeItemCentered>
-      </FixedContainer>
-
       <Footer />
     </HomeContainer>
   );

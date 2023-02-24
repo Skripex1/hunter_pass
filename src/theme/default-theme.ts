@@ -13,6 +13,11 @@ const defaultTheme: ITheme = {
     white: '#fff',
     lightGray: '#727272',
     darkGray: '#303030',
+    darkBlue: '#1E2B3F',
+    darkerBlue: '#050912',
+    lighterBlue: '#708B99',
+    blue: '#3897F0',
+    lineBlue: '#405F7C',
   },
   fonts: {
     normal: 'Outfit',
@@ -23,6 +28,8 @@ const defaultTheme: ITheme = {
     roboto: 'Roboto',
     inter: 'Inter Light',
     aldrich: 'Aldrich',
+    interBold: 'Inter Bold',
+    interReg: 'Inter Regular',
   },
   fontSize: {
     medium: '22px',
@@ -34,6 +41,8 @@ const defaultTheme: ITheme = {
     mSmall: '14px',
     gigant: '56px',
     xGigant: '64px',
+    mxSmall: '16px',
+    xxGigant: '72px',
   },
 };
 export default defaultTheme;

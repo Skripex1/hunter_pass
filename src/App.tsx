@@ -3,6 +3,7 @@ import useEmitters from './hooks/useEmitters';
 import useModalIsOpen from './hooks/useModallsOpen';
 import useWeb3Modal from './hooks/useWeb3Modal';
 import Home from './modules/home';
+import './App.css';
 
 const App = (): JSX.Element => {
   useWeb3Modal();

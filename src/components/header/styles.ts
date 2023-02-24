@@ -15,17 +15,49 @@ export const HeaderContainer = styled.header<{ isScrolled?: boolean }>`
 export const HeaderLeftSection = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row;
   z-index: 10;
 `;
 export const HeaderLogo = styled.img`
   height: 70px;
   width: 70px;
-  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
   align-self: center;
+  @media (max-width: 1200px) {
+    margin-left: -10px;
+  }
 `;
+
+export const HeaderLogoTextSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  gap: 3px;
+`;
+
+export const HeaderLogoTitle = styled.p`
+  font-size: ${props => props.theme.fontSize.small};
+  font-family: ${props => props.theme.fonts.interBold};
+  color: ${props => props.theme.colors.white};
+  text-transform: uppercase;
+  @media (max-width: 380px) {
+    display: none;
+  }
+`;
+
+export const HeaderLogoDescription = styled.p`
+  font-size: ${props => props.theme.fontSize.mSmall};
+  font-family: ${props => props.theme.fonts.inter};
+  color: ${props => props.theme.colors.white};
+  @media (max-width: 380px) {
+    display: none;
+  }
+`;
+
 export const HeaderNavContainer = styled.nav`
   display: flex;
-  gap: 20px;
+  gap: 60px;
   align-self: center;
   z-index: 100;
   align-items: center;
@@ -35,7 +67,10 @@ export const HeaderNavContainer = styled.nav`
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: 30px;
+  @media (max-width: 1200px) {
+    gap: 30px;
+  }
 `;
 export const HeaderNavItem = styled(Scroll.Link)`
   outline: 0;
@@ -82,11 +117,12 @@ export const InsideLink = styled(Scroll.Link).attrs(props => ({
     `};
   text-transform: uppercase;
   background-color: transparent;
-  font-size: ${props => props.theme.fontSize.medium};
+  font-size: ${props => props.theme.fontSize.small};
+  font-family: ${props => props.theme.fonts.interBold};
   color: ${props => props.theme.colors.white};
   &:hover {
     cursor: pointer;
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.darkBlue};
   }
 `;
 export const NavLink = styled(Scroll.Link).attrs(props => ({
@@ -98,11 +134,15 @@ export const NavLink = styled(Scroll.Link).attrs(props => ({
 }))`
   text-transform: uppercase;
   background-color: transparent;
-  font-size: ${props => props.theme.fontSize.mSmall};
+  font-size: ${props => props.theme.fontSize.small};
+  font-family: ${props => props.theme.fonts.interBold};
   color: ${props => props.theme.colors.white};
   &:hover {
     cursor: pointer;
-    ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.darkBlue};
+  }
+  @media (max-width: 1200px) {
+    font-size: ${props => props.theme.fontSize.mSmall};
   }
 `;
 export const HeaderMobileMenu = styled.nav<{ isOpen?: boolean }>`
@@ -137,6 +177,7 @@ export const HeaderLogoMobile = styled.img<{ isOpen: boolean }>`
       width: 70px;
       transition: width 1s ease-out;
     `}
+  margin-bottom: 50px;
 `;
 export const HeaderLogoContainer = styled.div`
   display: flex;
@@ -150,25 +191,45 @@ export const HeaderLogoNavMenuMobile = styled.img`
   width: 60px;
   align-self: center;
 `;
-export const HeaderLinkTree = styled.button`
-  outline: 0;
-  border: 0;
-  border-radius: 10px;
-  padding: 8px 20px;
-  background-color: ${props => props.theme.colors.black};
-  text-transform: uppercase;
-  font-family: ${props => props.theme.fonts.regular};
-  font-size: ${props => props.theme.fontSize.small};
-  color: ${props => props.theme.colors.white};
-  z-index: 10;
 
+export const JoinLink = styled(Scroll.Link).attrs(props => ({
+  spy: true,
+  activeClass: `${props.theme.colors.primary}`,
+  offset: -50,
+  smooth: 'easeInOutQuint',
+  duratioon: 500,
+}))`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 35px;
+  border-radius: 8px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: ${props => props.theme.colors.white};
+  font-size: ${props => props.theme.fontSize.small};
+  font-family: ${props => props.theme.fonts.interBold};
+  color: ${props => props.theme.colors.darkBlue};
   &:hover {
-    outline: 0;
-    border: 0;
     cursor: pointer;
+    background-color: ${props => props.theme.colors.darkBlue};
+    color: ${props => props.theme.colors.white};
   }
-  &:focus {
-    outline: 0;
-    border: 0;
+`;
+
+export const HeaderMobileMenuSocialsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+`;
+
+export const HeaderMobileMenuSocialImg = styled.img`
+  &:hover {
+    cursor: pointer;
+    background-color: ${props => props.theme.colors.darkBlue};
+    color: ${props => props.theme.colors.white};
   }
 `;

@@ -15,6 +15,11 @@ type colors = {
   gray?: string;
   lightGray: string;
   darkGray: string;
+  darkBlue: string;
+  darkerBlue: string;
+  lighterBlue: string;
+  blue: string;
+  lineBlue: string;
 };
 type fontSize = {
   medium: string;
@@ -26,6 +31,8 @@ type fontSize = {
   xxLarge: string;
   gigant: string;
   xGigant: string;
+  mxSmall: string;
+  xxGigant: string;
 };
 type fonts = {
   normal: string;
@@ -36,6 +43,8 @@ type fonts = {
   bold: string;
   extraBold: string;
   light: string;
+  interBold: string;
+  interReg: string;
 };
 
 interface ITheme {
