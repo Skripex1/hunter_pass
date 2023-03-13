@@ -21,10 +21,10 @@ const Footer = (): JSX.Element => {
         <FooterLeftSection>
           <FooterLogo src={logo} />
           <FooterLogoTextSection>
-            <FooterLogoTitle>Alpha Ordinal</FooterLogoTitle>
+            <FooterLogoTitle>Luna Hunters</FooterLogoTitle>
             <FooterLogoDescription>Secret to profitable trades</FooterLogoDescription>
           </FooterLogoTextSection>
-          <FooterCopyRight>2022 © Designed by the Pack. All rights reserved Alpha Ordinal</FooterCopyRight>
+          <FooterCopyRight>2022 © Designed by the Pack. All rights reserved Luna Hunters</FooterCopyRight>
           <FooterBegging>This is only the beginning.</FooterBegging>
         </FooterLeftSection>
       </FooterWrapper>

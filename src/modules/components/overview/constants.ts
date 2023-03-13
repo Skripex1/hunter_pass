@@ -1,5 +1,5 @@
-import bitcoin from './assets/bitcoin.png';
 import hunter from './assets/hunter.png';
+import lunaSneakPeek from './assets/luna_sneakpeek.jpg';
 
 export interface OverviewDescriptionInterface {
   title: string;
@@ -13,18 +13,18 @@ export const OverviewDescription: OverviewDescriptionInterface[] = [
     title: 'What is The Hunter Pass?',
     description: [
       'The Hunter Pass grants access to a community Alpha Group, designed for both new and experienced NFT investors. Our mission is to offer a convenient and cost-effective tool for our members to identify and evaluate top-notch NFT projects. ',
-      'We are here to guide investors in the upcoming Bitcoin NFT ecosystem by exposing our pack to the most profitable drops.',
+      'We are here to guide investors in the Ethereum and Bitcoin NFT ecosystems by exposing our pack to the most profitable drops.',
       'With the dedication and enthusiasm of our members, we have established a reputation as a pack of unstoppable hunters in the NFT space, consistently discovering profitable opportunities.',
     ],
     imgUrl: hunter,
     id: 1,
   },
   {
-    title: 'Bitcoin NFTs',
+    title: 'A collection of 888 wolves.',
     description: [
-      'We will be the first Alpha Group to collaborate with Bitcoin NFT Drops and we will automatically whitelist every single holder of The Hunter Pass. Our goal is to focus equally on Ethereum Blockchain NFTs and Bitcoin NFTs, especially once they are launched. We will provide the community a place to call work from home in the most productive way.',
+      'To reward our community we will draw an entire collection which acts as the access pass of the Alpha Group. 888 unique wolves will be generated from a pool of 70 hand drawn traits, including 3 legendary NFTs that hold the highest of value.',
     ],
-    imgUrl: bitcoin,
+    imgUrl: lunaSneakPeek,
     id: 2,
   },
 ];

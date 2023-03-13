@@ -1,5 +1,16 @@
 import styled from '../../../theme';
-import banner from './assets/banner.png';
+import banner from './assets/banner.jpg';
+import bannerTelefon from './assets/banner_telefon.jpeg';
+
+export const BannerContainerOverlay = styled.div`
+  background-color: black;
+  opacity: 0.3;
+  z-index: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0%;
+`;
 
 export const BannerContainer = styled.section`
   background-position: center;
@@ -12,8 +23,12 @@ export const BannerContainer = styled.section`
   display: flex;
   padding-top: 130px;
   flex-direction: column;
+
   @media screen and (max-width: 768px) {
     background-attachment: initial;
+  }
+  @media screen and (max-width: 450px) {
+    background-image: url(${bannerTelefon});
   }
 `;
 
@@ -55,14 +70,18 @@ export const BannerLogo = styled.img`
 
 export const BannerTextContainer = styled.section`
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 0px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   padding-top: 10px;
   padding-right: 30px;
   padding-left: 15px;
   padding-bottom: 15px;
+  @media (max-width: 1000px) {
+    align-items: center;
+  }
   @media (max-width: 750px) {
     padding: 0 5px 0 5px;
   }
@@ -90,6 +109,7 @@ export const BannerBigText = styled.section`
   font-size: ${props => props.theme.fontSize.xxGigant};
   font-family: ${props => props.theme.fonts.aldrich};
   color: ${props => props.theme.colors.white};
+  margin-top: 5px;
   @media (max-width: 1200px) {
     font-size: ${props => props.theme.fontSize.gigant};
   }
@@ -101,7 +121,6 @@ export const BannerBigText = styled.section`
   }
   @media (max-width: 750px) {
     font-size: ${props => props.theme.fontSize.xLarge};
-    margin-top: 5px;
   }
   @media (max-width: 380px) {
     font-size: ${props => props.theme.fontSize.large};

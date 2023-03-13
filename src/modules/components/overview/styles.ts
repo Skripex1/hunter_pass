@@ -95,8 +95,8 @@ export const OverViewDescriptionImg = styled.img`
   }
 `;
 export const OverViewDescriptionImg1 = styled.img`
-  @media (max-width: 450px) {
-    width: 280px;
-    height: 175px;
-  }
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  margin: 0 15px 0 15px;
 `;

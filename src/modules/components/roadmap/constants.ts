@@ -3,6 +3,7 @@ import staking from './assets/staking.png';
 import tree from './assets/tree.png';
 import dao from './assets/dao.png';
 import bitcoin from './assets/bitcoin.png';
+import ethPodium from './assets/ethPodium.png';
 import hunter from './assets/hunter.png';
 
 export interface RoadMapDescriptionInterface {
@@ -60,10 +61,10 @@ export const RoadMapDescription: RoadMapDescriptionInterface[] = [
 
 export const RoadMapDescriptionSecond: RoadMapDescriptionSecondInterface[] = [
   {
-    title: 'Discover Bitcoin NFTs.',
+    title: 'Discover NFTs.',
     description:
-      'We aim to collaborate with future Ordinals NFT Projects on the Bitcoin blockchain. Use your accumulated $Scraps to obtain whitelist spots in the upcoming projects that will reshape the web3 space.',
-    imgUrl: bitcoin,
+      'We aim to collaborate with projects across multiple blockchains while focusing on Ethereum NFTs. When the right infrastructure and demand is in place we will also promote Bitcoin NFTs to our Pack in order to capture as many profits as possible.',
+    imgUrl: ethPodium,
     direction: 0,
   },
   {

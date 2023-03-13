@@ -93,6 +93,8 @@ export const RoadMapBenefeciesText = styled.p`
 `;
 
 export const RoadMapDescriptionImg = styled.img`
+  max-width: 400px;
+  max-height: 400px;
   @media (max-width: 400px) {
     width: 350px;
   }

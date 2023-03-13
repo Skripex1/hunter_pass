@@ -48,7 +48,7 @@ const OverView = (): JSX.Element => {
       <OverViewDescriptionContainer>
         <OverViewDescriptionTitle style={{ textAlign: 'center' }}>Find out why we are the best</OverViewDescriptionTitle>
         <OverViewDescriptionTextSecond style={{ textAlign: 'center' }}>
-          The Hunter Pass is an unique NFT that gives you early access to profitable projects and puts you ahead of any trend.
+          The Hunter Pass gives you early access to profitable projects, puts you ahead of any trend and provides access to multiple tools.
         </OverViewDescriptionTextSecond>
       </OverViewDescriptionContainer>
     </OverViewContainer>

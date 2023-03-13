@@ -9,8 +9,8 @@ export const FaqObj: FaqInterface[] = [
     ans: 'By staking a Hunter Pass, you will receive 5 $Scraps/day. Staking wil be opened one week after the public mint is over.',
   },
   {
-    question: 'When will the Ordinal Wolves be airdropped?',
-    ans: 'We will start gathering the Bitcoin addresses of our holders right after the minting is over and we will airdrop the Ordinal Wolves NFTs.',
+    question: 'What is the maximum supply for the collection?',
+    ans: 'We will have a supply of 888 wolves generated from over 70 hand-drawn traits and 3 legendary rarities which means they are completely unique.',
   },
   {
     question: 'What can I use my accumulated $Scraps for?',
@@ -21,8 +21,8 @@ export const FaqObj: FaqInterface[] = [
     ans: 'A few weeks after staking has been opened the marketplace will open. This way you have enough time to accumulate $Scraps.',
   },
   {
-    question: 'When will Bitcoin NFTs be available to the public?',
-    ans: 'Thanks to the current hype around them we would expect the release date to be around the ending of this year.',
+    question: 'What is the minting price for the Hunter Pass and when is the mint?',
+    ans: 'We will have three stages with different prices: OW Stage 0.1 ETH, Whitelist Stage 0.15 ETH and Public Stage 0.18 ETH. Minting date: TBA.',
   },
   {
     question: 'What benefits do I get for joining the Alpha Group? ',

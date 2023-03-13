@@ -23,15 +23,12 @@ import {
 import './styles.css';
 import discord from './discord.png';
 import twitter from './twitter.png';
+import media from './medium.png';
 
 const Header = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const width = useAppSelector(appWidthSelector);
   const isOpen = useAppSelector(appIsNavOpen);
-  const handleOpenLinktree = () => {
-    dispatch(setAppIsNavOpenAction(false));
-    window.open('https://linktr.ee/anunnakivision');
-  };
 
   const handleOpenDiscord = () => {
     dispatch(setAppIsNavOpenAction(false));
@@ -40,7 +37,10 @@ const Header = (): JSX.Element => {
 
   const handleOpenTwitter = () => {
     dispatch(setAppIsNavOpenAction(false));
-    window.open(' https://twitter.com/OrdinalHunters');
+    window.open('https://twitter.com/LunaHunters');
+  };
+  const handleOpenMedia = () => {
+    window.open(' https://medium.com/@lunahunters/luna-hunters-alpha-group-32b010e964df');
   };
 
   const buildButton = (): JSX.Element => {
@@ -60,7 +60,7 @@ const Header = (): JSX.Element => {
         <HeaderLeftSection>
           <HeaderLogo src="assets/header-logo.png" />
           <HeaderLogoTextSection>
-            <HeaderLogoTitle>Alpha Ordinal</HeaderLogoTitle>
+            <HeaderLogoTitle>Luna Hunters</HeaderLogoTitle>
             <HeaderLogoDescription>Secret to profitable trades</HeaderLogoDescription>
           </HeaderLogoTextSection>
         </HeaderLeftSection>
@@ -86,6 +86,7 @@ const Header = (): JSX.Element => {
           <HeaderMobileMenuSocialsContainer>
             <HeaderMobileMenuSocialImg src={discord} onClick={() => handleOpenDiscord()} />
             <HeaderMobileMenuSocialImg src={twitter} onClick={() => handleOpenTwitter()} />
+            <HeaderMobileMenuSocialImg src={media} onClick={() => handleOpenMedia()} />
           </HeaderMobileMenuSocialsContainer>
         </HeaderMobileMenu>
       </HeaderContainer>
@@ -96,7 +97,7 @@ const Header = (): JSX.Element => {
       <HeaderLeftSection>
         <HeaderLogo src="assets/header-logo.png" />
         <HeaderLogoTextSection>
-          <HeaderLogoTitle>Alpha Ordinal</HeaderLogoTitle>
+          <HeaderLogoTitle>Luna Hunters</HeaderLogoTitle>
           <HeaderLogoDescription>Secret to profitable trades</HeaderLogoDescription>
         </HeaderLogoTextSection>
       </HeaderLeftSection>
