@@ -49,7 +49,7 @@ export const BannerLogoContainer = styled.section`
   flex-direction: column;
   gap: 40px;
   padding-left: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   @media (max-width: 1000px) {
     display: none;
   }

@@ -1,3 +1,4 @@
+import * as Router from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import styled, { css } from '../../theme';
 
@@ -68,7 +69,7 @@ export const HeaderNavContainer = styled.nav`
   backdrop-filter: blur(7px);
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 30px;
-  @media (max-width: 1200px) {
+  @media (max-width: 1250px) {
     gap: 30px;
   }
 `;
@@ -125,6 +126,24 @@ export const InsideLink = styled(Scroll.Link).attrs(props => ({
     color: ${props => props.theme.colors.darkBlue};
   }
 `;
+export const InsideLinkWhitePaper = styled(Router.Link)<{ isOpen?: boolean }>`
+  transition: visibility 0.2s ease;
+  ${props =>
+    !props.isOpen &&
+    css`
+      visibility: hidden;
+    `};
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: ${props => props.theme.fontSize.small};
+  font-family: ${props => props.theme.fonts.interBold};
+  color: ${props => props.theme.colors.white};
+  &:hover {
+    cursor: pointer;
+    color: ${props => props.theme.colors.darkBlue};
+  }
+  text-decoration: none;
+`;
 export const NavLink = styled(Scroll.Link).attrs(props => ({
   spy: true,
   activeClass: `${props.theme.colors.primary}`,
@@ -141,7 +160,22 @@ export const NavLink = styled(Scroll.Link).attrs(props => ({
     cursor: pointer;
     color: ${props => props.theme.colors.darkBlue};
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1350px) {
+    font-size: ${props => props.theme.fontSize.mSmall};
+  }
+`;
+export const NavLinkWhitePaper = styled(Router.Link)`
+  text-transform: uppercase;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: ${props => props.theme.fontSize.small};
+  font-family: ${props => props.theme.fonts.interBold};
+  color: ${props => props.theme.colors.white};
+  &:hover {
+    cursor: pointer;
+    color: ${props => props.theme.colors.darkBlue};
+  }
+  @media (max-width: 1350px) {
     font-size: ${props => props.theme.fontSize.mSmall};
   }
 `;
@@ -192,19 +226,14 @@ export const HeaderLogoNavMenuMobile = styled.img`
   align-self: center;
 `;
 
-export const JoinLink = styled(Scroll.Link).attrs(props => ({
-  spy: true,
-  activeClass: `${props.theme.colors.primary}`,
-  offset: -50,
-  smooth: 'easeInOutQuint',
-  duratioon: 500,
-}))`
+export const JoinLink = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 130px;
   height: 35px;
   border-radius: 8px;
+  border-style: none;
   margin-right: 20px;
   text-transform: uppercase;
   text-align: center;

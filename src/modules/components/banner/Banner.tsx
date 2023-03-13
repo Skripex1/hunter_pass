@@ -33,9 +33,9 @@ const Banner = (): JSX.Element => {
       <BannerContainer>
         <BannerFooter>
           <BannerLogoContainer>
-            <BannerLogo src={Logos[0].logoUrl} onClick={() => handleOpenDiscord()} />
+            <BannerLogo src={Logos[0].logoUrl} onClick={() => handleOpenDiscord()} style={{ width: '50px', height: '50px' }} />
             <BannerLogo src={Logos[1].logoUrl} onClick={() => handleOpenTwitter()} />
-            <BannerLogo src={Logos[2].logoUrl} onClick={() => handleOpenMedia()} />
+            <BannerLogo src={Logos[2].logoUrl} onClick={() => handleOpenMedia()} style={{ width: '45px', height: '45px' }} />
           </BannerLogoContainer>
           <BannerTextContainer>
             <BannerSmallText>Alpha. Whitelist. Staking. Bitcoin NFTs. Community. </BannerSmallText>

@@ -4,7 +4,7 @@ import useModalIsOpen from './hooks/useModallsOpen';
 import useWeb3Modal from './hooks/useWeb3Modal';
 import Home from './modules/home';
 import './App.css';
-import WhitePaper from './modules/whitepaper/WhitePaper';
+import WhitePaper from './modules/whitepaper';
 
 const App = (): JSX.Element => {
   useWeb3Modal();

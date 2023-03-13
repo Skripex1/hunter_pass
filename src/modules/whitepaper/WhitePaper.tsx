@@ -1,24 +1,14 @@
-import React, { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import React from 'react';
+import { WhitePaperContainer, WhitePaperPageContainer } from './styles';
+import { Images } from './constants';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
-const WhitePaper: React.FC = () => {
-  const [totalPages, setTotalPages] = useState(0);
-
-  const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
-    setTotalPages(numPages);
-  };
-
+const WhitePaper = (): JSX.Element => {
   return (
-    <div style={{ width: '100vw', height: '100vh', overflow: 'scroll' }}>
-      <Document file={`${process.env.PUBLIC_URL}/Luna_Hunters.pdf`} onLoadSuccess={onDocumentLoadSuccess}>
-        {Array.from(new Array(totalPages), (el, index) => (
-          <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-        ))}
-      </Document>
-    </div>
+    <WhitePaperContainer>
+      {Images.map(e => (
+        <WhitePaperPageContainer key={e.url} src={e.url} />
+      ))}
+    </WhitePaperContainer>
   );
 };
 
