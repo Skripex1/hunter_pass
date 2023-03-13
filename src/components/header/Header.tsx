@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../store';
 import { setAppIsNavOpenAction } from '../../store/actions/app-actions';
 import { appIsNavOpen, appWidthSelector } from '../../store/selectors/app-selectors';
@@ -19,6 +20,8 @@ import {
   JoinLink,
   HeaderMobileMenuSocialsContainer,
   HeaderMobileMenuSocialImg,
+  NavLinkWhitePaper,
+  InsideLinkWhitePaper,
 } from './styles';
 import './styles.css';
 import discord from './discord.png';
@@ -54,7 +57,7 @@ const Header = (): JSX.Element => {
       </button>
     );
   };
-  if (width < 1000) {
+  if (width < 1050) {
     return (
       <HeaderContainer>
         <HeaderLeftSection>
@@ -83,6 +86,9 @@ const Header = (): JSX.Element => {
           <InsideLink isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="faq">
             Faq
           </InsideLink>
+          <InsideLinkWhitePaper isOpen={isOpen} onClick={() => dispatch(setAppIsNavOpenAction(false))} to="whitepaper">
+            Whitepaper
+          </InsideLinkWhitePaper>
           <HeaderMobileMenuSocialsContainer>
             <HeaderMobileMenuSocialImg src={discord} onClick={() => handleOpenDiscord()} />
             <HeaderMobileMenuSocialImg src={twitter} onClick={() => handleOpenTwitter()} />
@@ -107,8 +113,9 @@ const Header = (): JSX.Element => {
         <NavLink to="roadmap">Roadmap</NavLink>
         <NavLink to="team">Team</NavLink>
         <NavLink to="faq">Faq</NavLink>
+        <NavLinkWhitePaper to="whitepaper">Whitepaper</NavLinkWhitePaper>
       </HeaderNavContainer>
-      <JoinLink to="mint">Join</JoinLink>
+      <JoinLink onClick={() => handleOpenDiscord()}>Join</JoinLink>
     </HeaderContainer>
   );
 };
