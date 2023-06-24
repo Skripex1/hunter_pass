@@ -40,7 +40,7 @@ const MintDistribution = (): JSX.Element => {
           </MintDistributionDetailsContainer>
         ))}
       </MintDistributionInformationContainer>
-      <MintDistributionTitle style={{ marginTop: '100px', marginBottom: '10px' }}>Who is behind Luna Hunters?</MintDistributionTitle>
+      <MintDistributionTitle style={{ marginTop: '100px', marginBottom: '10px' }}>Who is behind Ordinal Hunters?</MintDistributionTitle>
       {MintDistributionTexts.map(e => (
         <MintDescriptionText key={e.description}>{e.description}</MintDescriptionText>
       ))}
