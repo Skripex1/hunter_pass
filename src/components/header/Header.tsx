@@ -63,7 +63,7 @@ const Header = (): JSX.Element => {
         <HeaderLeftSection>
           <HeaderLogo src="assets/header-logo.png" />
           <HeaderLogoTextSection>
-            <HeaderLogoTitle>Luna Hunters</HeaderLogoTitle>
+            <HeaderLogoTitle>Ordinal Hunters</HeaderLogoTitle>
             <HeaderLogoDescription>Secret to profitable trades</HeaderLogoDescription>
           </HeaderLogoTextSection>
         </HeaderLeftSection>
@@ -103,7 +103,7 @@ const Header = (): JSX.Element => {
       <HeaderLeftSection>
         <HeaderLogo src="assets/header-logo.png" />
         <HeaderLogoTextSection>
-          <HeaderLogoTitle>Luna Hunters</HeaderLogoTitle>
+          <HeaderLogoTitle>Ordinal Hunters</HeaderLogoTitle>
           <HeaderLogoDescription>Secret to profitable trades</HeaderLogoDescription>
         </HeaderLogoTextSection>
       </HeaderLeftSection>
